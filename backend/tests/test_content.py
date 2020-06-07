@@ -14,8 +14,8 @@ def test_compound_content_type_contains_multiple_content_types():
 
     compoundContent = CompoundContent('test-compound-component', [text1, text2, image, code1, quote1])
 
-    assert compoundContent.content[0].content == 'This is first text'
-    assert compoundContent.content[1].content == 'This is second text'
+    assert compoundContent.content[0].text == 'This is first text'
+    assert compoundContent.content[1].text == 'This is second text'
     assert compoundContent.content[2].withImgSize() == '<img src="https://via.placeholder.com/150" width="10%" height="10%"/>'
     assert compoundContent.content[3].language == 'C++'
     assert compoundContent.content[3].code == '#include <cstdio>'
